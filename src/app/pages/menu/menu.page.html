@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-icon slot="start" name="menu" size="large" class="ion-padding" (click)="verMenu()"></ion-icon>
+    <ion-text slot="end" >
+      <p>{{username || 'No registrado'}}</p>
+    </ion-text>
+    <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text class="ion-text-center">
+    <h1>Flujo de Actividades<br><ion-text slot="end" >
+      <p>{{username}}</p>
+    </ion-text></h1>
+  </ion-text>
+  <div  *ngFor="let mensaje of mensaje">
+  
+      <h1>{{mensaje.profesor.materia}} </h1>
+
+  </div>
+</ion-content>
